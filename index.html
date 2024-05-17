@@ -27,17 +27,14 @@
     <label for="firstName">First Name <span>*</span></label>
     <input type="text" name="firstName" id="firstName" required>
     <span class="error" id="firstNameError"></span>
-    <!-- This field is required -->
 
     <label for="lastName">Last Name <span>*</span></label>
     <input type="text" name="lastName" id="lastName" required>
     <span class="error" id="lastNameError"></span>
-    <!-- This field is required -->
 
     <label for="email">Email Address <span>*</span></label>
     <input type="email" name="email" id="email" required>
     <span class="error" id="emailError"></span>
-    <!-- Please enter a valid email address -->
 
     <label for="radio">Query Type <span>*</span></label>
     <div class="radios-container">
@@ -51,19 +48,16 @@
       </div>
     </div>
     <span class="error" id="queryError"></span>
-    <!-- Please select a query type -->
 
     <label for="message">Message <span>*</span></label>
-    <textarea name="message" id="message"></textarea>
+    <textarea name="message" id="message" required></textarea>
     <span class="error" id="messageError"></span>
-    <!-- This field is required -->
 
     <div class="checkbox-container">
-      <input id="checkbox" type="checkbox">
+      <input id="checkbox" type="checkbox" required>
       <label for="checkbox">I consent to being contacted by the team <span>*</span></label>
     </div>
     <span class="error" id="checkboxError"></span>
-    <!-- To submit this form, please consent to being contacted -->
 
     <button id="btnSubmit" type="submit">Submit</button>
     <!-- Message Sent!
