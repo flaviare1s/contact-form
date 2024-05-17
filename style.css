@@ -40,12 +40,13 @@ h1 {
     font-weight: bold;
     line-height: 100%;
     letter-spacing: -1px;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 }
 
 label {
     line-height: 150%;
     margin-bottom: 8px;
+    margin-top: 24px;
 }
 
 label span {
@@ -56,7 +57,6 @@ input {
     height: 51px;
     padding: 12px 24px;
     border-radius: 8px;
-    margin-bottom: 24px;
     border: 2px solid var(--medium-grey);
 }
 
@@ -73,7 +73,6 @@ input:focus {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-bottom: 24px;
 }
 
 .radio-container {
@@ -88,7 +87,7 @@ input:focus {
 }
 
 .radio-container label {
-    padding-top: 10px;
+    padding-bottom: 15px;
     cursor: pointer;
 }
 
@@ -139,6 +138,7 @@ input[type="radio"]:checked {
 }
 
 .checkbox-container label {
+    cursor: pointer;
     padding-bottom: 10px;
 }
 
@@ -168,6 +168,14 @@ input[type="checkbox"] {
 footer {
     margin-top: 10px;
     cursor: pointer;
+}
+
+.error {
+
+}
+
+.errorActive {
+    border: 2px solid --custom-red;
 }
 
 .attribution { 
