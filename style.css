@@ -84,6 +84,7 @@ input:focus {
     width: 100%;
     gap: 12px;
     padding: 0px 24px;
+    outline: none;
 }
 
 .radio-container label {
@@ -150,7 +151,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-#btn-submit {
+#btnSubmit {
     background-color: var(--custom-green);
     color: white;
     height: 59px;
@@ -161,7 +162,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-#btn-submit:hover {
+#btnSubmit:hover {
     background-color: var(--dark-grey);
 }
 
@@ -171,11 +172,17 @@ footer {
 }
 
 .error {
-
+    color: var(--custom-red);
+    margin-top: 8px;
+    line-height: 150%;
 }
 
 .errorActive {
-    border: 2px solid --custom-red;
+    border: 2px solid var(--custom-red);
+}
+
+.focus {
+    background-color: var(--light-green);
 }
 
 .attribution { 
