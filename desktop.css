@@ -10,4 +10,8 @@
     .radios-container {
         flex-direction: row;
     }
+
+    .checkbox-container label {
+        padding-bottom: 15px;
+    }
 }
