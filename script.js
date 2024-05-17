@@ -88,11 +88,15 @@ function validateForm(event) {
 
         if(!isValid) {
             return
+        } else {
+            submitForm()
         }
-
-        form.submit()
     }
 }
 
+function submitForm() {
+    alert('enviado')
+    form.reset()
+}
+
 btnSubmit.addEventListener('click', validateForm)
-form.addEventListener('submit', validateForm)
