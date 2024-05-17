@@ -11,6 +11,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tablet.css">
+  <link rel="stylesheet" href="desktop.css">
 
   <script src="script.js" defer></script>
   
@@ -18,37 +20,42 @@
 </head>
 <body>
 
-  Contact Us
+  <form id="form">
 
-  First Name
-  This field is required
+    <h1>Contact Us</h1>
 
-  Last Name
-  This field is required
+    <label for="first-name">First Name</label>
+    <input type="text" name="first-name" id="first-name" required>
+    <!-- This field is required -->
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <label for="last-name">Last Name</label>
+    <input type="text" name="last-name" id="last-name" required>
+    <!-- This field is required -->
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" required>
+    <!-- Please enter a valid email address -->
 
-  Message
-  This field is required
+    <label for="radio">Query Type</label>
+    <input type="radio" name="radio" id="general">General Enquiry</input>
+    <input type="radio" name="radio" id="support">Support Request</input>
+    <!-- Please select a query type -->
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+    <label for="message">Message</label>
+    <textarea name="message" id="message"></textarea>
+    <!-- This field is required -->
 
-  Submit
+    <input type="checkbox">I consent to being contacted by the team</input>
+    <!-- To submit this form, please consent to being contacted -->
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+    <button type="submit">Submit</button>
+    <!-- Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+  </form>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/flaviare1s">Flávia Reis</a>.
+  </footer>
 </body>
 </html>
