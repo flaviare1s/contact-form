@@ -109,7 +109,7 @@ input[type="radio"] {
 #message {
     padding: 12px 24px;
     border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     border: 2px solid var(--medium-grey);
     min-height: 240px;
 }
@@ -133,7 +133,7 @@ input[type="radio"]:checked {
     display: flex;
     gap: 12px;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     vertical-align: middle;
 }
 
