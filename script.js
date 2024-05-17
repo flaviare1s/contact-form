@@ -1,5 +1,6 @@
+let messageArea = document.querySelector('#message')
+
 function adjustTextareaRows() {
-    let messageArea = document.querySelector('#message')
     if (window.innerWidth <= 768) {
         messageArea.rows = 12
     } else if (window.innerWidth > 768 && window.innerWidth <= 1280) {
