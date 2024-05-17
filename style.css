@@ -64,6 +64,11 @@ input:hover {
     border: 2px solid var(--custom-green);
 }
 
+input:focus {
+    background-color: var(--light-green);
+    border: 2px solid var(--custom-green);
+}
+
 .radios-container {
     display: flex;
     flex-direction: column;
@@ -112,6 +117,11 @@ input[type="radio"] {
 
 #message:hover {
     border: 2px solid var(--custom-green);
+}
+
+#message:focus {
+    border: 2px solid var(--custom-green);
+    background-color: var(--light-green);
 }
 
 input[type="radio"]:checked {
