@@ -11,6 +11,12 @@
         flex-direction: row;
     }
 
+    
+    #message {
+        min-height: 105px;
+    }
+    
+
     .checkbox-container label {
         padding-bottom: 15px;
     }
