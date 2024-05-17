@@ -13,6 +13,27 @@
     font-family: "Karla", sans-serif;
 }
 
+body {
+    background-color: var(--light-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+    padding: 32px 0;
+}
+
+#form {
+    background-color: white;
+    width: 95%;
+    padding: 24px;
+}
+
+footer {
+    margin-top: 10px;
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
