@@ -24,28 +24,36 @@
 
     <h1>Contact Us</h1>
 
-    <label for="first-name">First Name</label>
+    <label for="first-name">First Name <span>*</span></label>
     <input type="text" name="first-name" id="first-name" required>
     <!-- This field is required -->
 
-    <label for="last-name">Last Name</label>
+    <label for="last-name">Last Name <span>*</span></label>
     <input type="text" name="last-name" id="last-name" required>
     <!-- This field is required -->
 
-    <label for="email">Email Address</label>
+    <label for="email">Email Address <span>*</span></label>
     <input type="email" name="email" id="email" required>
     <!-- Please enter a valid email address -->
 
-    <label for="radio">Query Type</label>
-    <input type="radio" name="radio" id="general">General Enquiry</input>
-    <input type="radio" name="radio" id="support">Support Request</input>
+    <label for="radio">Query Type <span>*</span></label>
+    <div class="radios-container">
+      <div class="radio-container">
+        <input type="radio" name="radio" id="general">General Enquiry</input>
+      </div>
+      <div class="radio-container">
+        <input type="radio" name="radio" id="support">Support Request</input>
+      </div>
+    </div>
     <!-- Please select a query type -->
 
-    <label for="message">Message</label>
+    <label for="message">Message <span>*</span></label>
     <textarea name="message" id="message"></textarea>
     <!-- This field is required -->
 
-    <input type="checkbox">I consent to being contacted by the team</input>
+    <div>
+      <input id="checkbox" type="checkbox">I consent to being contacted by the team</input>
+    </div>
     <!-- To submit this form, please consent to being contacted -->
 
     <button type="submit">Submit</button>

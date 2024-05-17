@@ -2,8 +2,12 @@
     body {
         height: 100vh;
     }
-    
+
     #form {
         width: 50%;
+    }
+
+    .radios-container {
+        flex-direction: row;
     }
 }
