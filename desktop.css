@@ -20,4 +20,8 @@
     .checkbox-container label {
         padding-bottom: 15px;
     }
+
+    #submited {
+        width: 450px;
+    }
 }
