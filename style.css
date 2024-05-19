@@ -191,7 +191,7 @@ footer {
 }
 
 .errorActive {
-    border: 2px solid var(--custom-red);
+    border: 2px solid var(--custom-red) !important;
 }
 
 .focus {
