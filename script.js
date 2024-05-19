@@ -17,6 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const radiosContainers = document.querySelectorAll('.radio-container')
     const submitedMessage = document.querySelector('#submited')
     const checked = document.querySelector('#check')
+    const generalCheckedImage = document.querySelector('#radio-selected-general')
+    const supportCheckedImage = document.querySelector('#radio-selected-support')
+
+    generalRadioInput.addEventListener('click', () => {
+        if (generalRadioInput.checked) {
+            generalCheckedImage.classList.remove('hidden');
+            console.log('teste1');
+        }
+    });
+    
+    supportRadioInput.addEventListener('click', () => {
+        if (supportRadioInput.checked) {
+            supportCheckedImage.classList.remove('hidden');
+            console.log('teste3');
+        }
+    });
+    
+    generalCheckedImage.addEventListener('click', () => {
+        generalCheckedImage.classList.add('hidden');
+        console.log('teste2');
+    });
+    
+    supportCheckedImage.addEventListener('click', () => {
+        supportCheckedImage.classList.add('hidden');
+        console.log('teste4');
+    });
+    
+    
 
     checkboxInput.addEventListener('change', toggleVisibility)
     
@@ -32,18 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
             checked.classList.add('hidden')
         }
     }
-
-    radiosContainers.forEach(item => {
-        item.addEventListener('click', (event) => {
-            radiosContainers.forEach(el => el.classList.remove('focus'))
-            item.classList.add('focus')
-            event.stopPropagation()
-        })
-    })
-
-    document.addEventListener('click', () => {
-        radiosContainers.forEach(item => item.classList.remove('focus'))
-    });
 
     function validateForm(event) {
         event.preventDefault()
@@ -81,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             queryError.innerText = 'Please select a query type'
             radiosContainers.forEach(container => {
                 container.classList.add('errorActive')
-            });
+            })
             isValid = false
         } else {
             queryError.innerText = ''
