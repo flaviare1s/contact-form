@@ -19,26 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const checked = document.querySelector('#check')
     const generalCheckedImage = document.querySelector('#radio-selected-general')
     const supportCheckedImage = document.querySelector('#radio-selected-support')
+    const generalContainer = document.querySelector('#general-container')
+    const supportContainer = document.querySelector('#support-container')
 
     generalRadioInput.addEventListener('click', () => {
         if (generalRadioInput.checked) {
             generalCheckedImage.classList.remove('hidden')
-            console.log('teste1')
+            supportCheckedImage.classList.add('hidden')
+            generalContainer.style.backgroundColor = 'hsl(148, 38%, 91%)'
+            supportContainer.style.backgroundColor = 'white' 
         }
     })
-
+    
     generalCheckedImage.addEventListener('click', () => {
         if(generalRadioInput.checked) {
             generalCheckedImage.classList.add('hidden')
             generalRadioInput.checked = !generalRadioInput.checked
-            console.log('teste2')
+            generalContainer.style.backgroundColor = 'white'
         } 
     })
     
     supportRadioInput.addEventListener('click', () => {
         if (supportRadioInput.checked) {
             supportCheckedImage.classList.remove('hidden')
-            console.log('teste3')
+            generalCheckedImage.classList.add('hidden')
+            supportContainer.style.backgroundColor = 'hsl(148, 38%, 91%)'
+            generalContainer.style.backgroundColor = 'white'
         }
     })
     
@@ -46,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(supportRadioInput.checked) {
             supportCheckedImage.classList.add('hidden')
             supportRadioInput.checked = !supportRadioInput.checked
-            console.log('teste4')
+            supportContainer.style.backgroundColor = 'white'
         } 
     })
     
