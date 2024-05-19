@@ -27,16 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
             generalCheckedImage.classList.remove('hidden')
             supportCheckedImage.classList.add('hidden')
             generalContainer.style.backgroundColor = 'hsl(148, 38%, 91%)'
-            supportContainer.style.backgroundColor = 'white' 
+            supportContainer.style.backgroundColor = 'white'
         }
     })
     
-    generalCheckedImage.addEventListener('click', () => {
-        if(generalRadioInput.checked) {
-            generalCheckedImage.classList.add('hidden')
-            generalRadioInput.checked = !generalRadioInput.checked
+    generalRadioInput.addEventListener('blur', () => {
+        if (!generalRadioInput.checked) {
             generalContainer.style.backgroundColor = 'white'
-        } 
+        }
     })
     
     supportRadioInput.addEventListener('click', () => {
@@ -48,12 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
     
-    supportCheckedImage.addEventListener('click', () => {
-        if(supportRadioInput.checked) {
-            supportCheckedImage.classList.add('hidden')
-            supportRadioInput.checked = !supportRadioInput.checked
+    supportRadioInput.addEventListener('blur', () => {
+        if (!supportRadioInput.checked) {
             supportContainer.style.backgroundColor = 'white'
-        } 
+        }
+    })
+    
+    document.addEventListener('click', (event) => {
+        if (!event.target.matches('#general') && !event.target.matches('#support')) {
+            generalContainer.style.backgroundColor = 'white'
+            supportContainer.style.backgroundColor = 'white'
+        }
     })
     
     checkboxInput.addEventListener('change', toggleVisibility)
@@ -137,6 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function submitForm() {
         form.reset()
         submitedMessage.classList.remove('hidden')
+        generalContainer.style.backgroundColor = 'white'
+        supportContainer.style.backgroundColor = 'white'
+        checked.classList.add('hidden')
+
     }
 
     btnSubmit.addEventListener('click', validateForm)
