@@ -53,6 +53,16 @@ label span {
     color: var(--custom-green);
 }
 
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#names-container {
+    display: flex;
+    flex-direction: column;
+}
+
 input {
     height: 51px;
     padding: 12px 24px;

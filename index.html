@@ -24,13 +24,18 @@
 
     <h1>Contact Us</h1>
 
-    <label for="firstName">First Name <span>*</span></label>
-    <input type="text" name="firstName" id="firstName" required>
-    <span class="error" id="firstNameError"></span>
-
-    <label for="lastName">Last Name <span>*</span></label>
-    <input type="text" name="lastName" id="lastName" required>
-    <span class="error" id="lastNameError"></span>
+    <div id="names-container">
+      <div class="name-container">
+        <label for="firstName">First Name <span>*</span></label>
+        <input type="text" name="firstName" id="firstName" required>
+        <span class="error" id="firstNameError"></span>
+      </div>
+      <div class="name-container">
+        <label for="lastName">Last Name <span>*</span></label>
+        <input type="text" name="lastName" id="lastName" required>
+        <span class="error" id="lastNameError"></span>
+      </div>
+    </div>
 
     <label for="email">Email Address <span>*</span></label>
     <input type="email" name="email" id="email" required>

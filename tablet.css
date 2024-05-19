@@ -7,6 +7,17 @@
         width: 85%;
     }
 
+    #names-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .name-container {
+        width: 100%;
+    }
+
     .radios-container {
         flex-direction: row;
     }
