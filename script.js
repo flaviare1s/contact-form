@@ -16,6 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnSubmit = document.querySelector('#btnSubmit')
     const radiosContainers = document.querySelectorAll('.radio-container')
     const submitedMessage = document.querySelector('#submited')
+    const checked = document.querySelector('#check')
+
+    checkboxInput.addEventListener('change', toggleVisibility)
+    
+    checked.addEventListener('click', () => {
+        checkboxInput.checked = false
+        toggleVisibility()
+    })
+
+    function toggleVisibility() {
+        if(checkboxInput.checked) {
+            checked.classList.remove('hidden')
+        } else {
+            checked.classList.add('hidden')
+        }
+    }
 
     radiosContainers.forEach(item => {
         item.addEventListener('click', (event) => {
