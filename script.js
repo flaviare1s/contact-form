@@ -22,30 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generalRadioInput.addEventListener('click', () => {
         if (generalRadioInput.checked) {
-            generalCheckedImage.classList.remove('hidden');
-            console.log('teste1');
+            generalCheckedImage.classList.remove('hidden')
+            console.log('teste1')
         }
-    });
+    })
+
+    generalCheckedImage.addEventListener('click', () => {
+        if(generalRadioInput.checked) {
+            generalCheckedImage.classList.add('hidden')
+            generalRadioInput.checked = !generalRadioInput.checked
+            console.log('teste2')
+        } 
+    })
     
     supportRadioInput.addEventListener('click', () => {
         if (supportRadioInput.checked) {
-            supportCheckedImage.classList.remove('hidden');
-            console.log('teste3');
+            supportCheckedImage.classList.remove('hidden')
+            console.log('teste3')
         }
-    });
-    
-    generalCheckedImage.addEventListener('click', () => {
-        generalCheckedImage.classList.add('hidden');
-        console.log('teste2');
-    });
+    })
     
     supportCheckedImage.addEventListener('click', () => {
-        supportCheckedImage.classList.add('hidden');
-        console.log('teste4');
-    });
+        if(supportRadioInput.checked) {
+            supportCheckedImage.classList.add('hidden')
+            supportRadioInput.checked = !supportRadioInput.checked
+            console.log('teste4')
+        } 
+    })
     
-    
-
     checkboxInput.addEventListener('change', toggleVisibility)
     
     checked.addEventListener('click', () => {
